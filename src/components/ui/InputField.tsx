@@ -1,43 +1,32 @@
-interface InputFieldProps {
-    label?: string;
-    placeholder: string;
-    value: string;
-    type?: string;
-    large?: boolean;
-    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+export interface InputFieldrops {
+    label: string
+    placeholder: string
+    value?: string
+    type?: string
+    large?: boolean
+    onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
 }
 
-export default function InputField({
-    label,
-    placeholder,
-    value,
-    type = "text",
-    large = false,
-    onChange,
-}: InputFieldProps) {
-    const inputId = label ? label.toLowerCase().replace(/\s+/g, "-") : "input-field";
+export function InputField({ label, placeholder, value, type, large, onChange }: InputFieldrops) {
     return (
-        <div className="w-full space-y-2">
-            {label && <label htmlFor={inputId} className="block text-sm font-medium text-gray-700">{label}</label>}
+        <div className="flex flex-col gap-1.5">
+            <label className="text-zinc-600 font-medium text-sm">{label}</label>
             {large ? (
                 <textarea
-                    id={inputId}
-                    className="w-full px-4 py-2 border rborder-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500"
+                    className={`bg-white py-2 px-3 border border-zinc-300 placeholder:text-zinc-500 text-zinc-900 shadow-xs rounded-lg focus:ring-[4px] focus:ring-zinc-400/15 focus:outline-none h-24 align-text-top`}
                     placeholder={placeholder}
-                    value={value}
+                    value={value || ''}
                     onChange={onChange}
-                    rows={4}
                 />
             ) : (
                 <input
-                    id={inputId}
+                    className={`bg-white py-2 px-3 border border-zinc-300 placeholder:text-zinc-500 text-zinc-900 shadow-xs rounded-lg focus:ring-[4px] focus:ring-zinc-400/15 focus:outline-none`}
                     type={type}
-                    className="w-full px-4 py-2 border rborder-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500"
                     placeholder={placeholder}
-                    value={value}
+                    value={value || ''}
                     onChange={onChange}
                 />
             )}
         </div>
-    );
+    )
 }
