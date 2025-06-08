@@ -4,6 +4,8 @@
 4. e2e testing using playwright and synpress
 5. Deploy to Vercel
 
+Environment : Anvil
+
 Website Link : https://html-ts-tsender-airdrop-ui.vercel.app/
 
 Website Screenshot : 
