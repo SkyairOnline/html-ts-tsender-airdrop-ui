@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "anvil": "anvil --load-state tsender-deployed.json",
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -23,6 +23,8 @@
     "wagmi": "^2.15.6"
   },
   "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@synthetixio/synpress": "^4.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
