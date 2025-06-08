@@ -1,3 +1,7 @@
+This is a website for send the token to respective address, with the amount of the token
+
+And this is just a practice only, I am not responsible for this if this is fail. THis is just a showcase only
+
 1. Create a basic static react/next.js application
 2. Connect our wallet with connect application
 3. Implement airdrop ERC20 function 
