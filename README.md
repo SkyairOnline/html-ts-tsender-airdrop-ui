@@ -4,6 +4,8 @@
 4. e2e testing using playwright and synpress
 5. Deploy to Vercel
 
+To use it fully : This is a website without backend live, you have to use anvil using `pnpm anvil`
+
 Environment : Anvil
 
 Website Link : https://html-ts-tsender-airdrop-ui.vercel.app/
